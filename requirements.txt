@@ -1,0 +1,7 @@
+matplotlib
+Pillow
+numpy
+rasterio
+fastapi
+uvicorn[standard]
+python-multipart

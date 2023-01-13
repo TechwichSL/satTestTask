@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "f815b0dd-f5c1-4cfa-9f21-400db887e78d",
+		"name": "sentinel task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4627027"
+	},
+	"item": [
+		{
+			"name": "Attributes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/amzmohammad/Downloads/S2L2A_2022-06-09.tiff"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/attributes",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"attributes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Thumbnail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/amzmohammad/Pictures/Screenshot from 2022-06-02 12-01-22.png"
+						},
+						{
+							"key": "width",
+							"value": "444",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "height",
+							"value": "444",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/thumbnail",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"thumbnail"
+					],
+					"query": [
+						{
+							"key": "width",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NDVI",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/amzmohammad/Downloads/S2L2A_2022-06-09.tiff"
+						},
+						{
+							"key": "palette",
+							"value": "Accent",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/ndvi",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"ndvi"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
